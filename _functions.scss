@@ -1,0 +1,24 @@
+// Basic function to change text color based on background
+@function determine_color($col){
+    @if(lightness($col)>60){
+        // Light bg hence use dark text 
+        @return black;
+    }@else{
+        @return #ccc;
+    }
+}
+
+@mixin determine_background($color){
+    background-color: $color;
+    color: determine_color($color);
+}
+
+// Lists and loops 
+
+$margins:(1,2,3,4,5);
+
+@each $margin in $margins{
+    .r-#{$margin}{
+        margin: #{margin} rem 0;
+    }
+}

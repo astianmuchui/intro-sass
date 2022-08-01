@@ -1,0 +1,27 @@
+@import 'config';
+@import 'functions'; 
+
+*{
+    font-family: monospace;
+    box-sizing: border-box;
+    text-decoration: none;
+    
+}
+
+body{
+    background-color: rgb(21, 23, 37);
+    
+    main{ 
+        width: 70%;
+        // Run function 
+        @include determine_background(transparent);
+    }
+    p{
+        
+        @include determine_background(transparent);
+        width: 70%;
+    }
+    a{
+        color: white;
+    }
+}
